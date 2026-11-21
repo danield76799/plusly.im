@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Plusly — Open chat en Ritme voor balans</title>
-<meta name="description" content="Plusly is een veilige, open-source Matrix-chatapp. Ritme is de dagplanner voor mensen met een bipolaire stoornis: check-ins, medicatie en een rapport voor je behandelaar.">
+<title data-i18n="meta.title">Plusly — Open chat en Ritme voor balans</title>
+<meta name="description" content="Plusly is een veilige, open-source Matrix-chatapp. Ritme is de dagplanner voor mensen met een bipolaire stoornis: check-ins, medicatie en een rapport voor je behandelaar." data-i18n-attr="content:meta.description">
 <link rel="icon" type="image/svg+xml" href="plusly.svg">
 <style>
   :root {
@@ -66,6 +66,9 @@
   .links .store:hover { text-decoration:none; filter:brightness(1.06); }
   .links .store svg { width:14px; height:14px; fill:#06282e; }
   .links a:hover { text-decoration: underline; }
+  .lang { display:flex; gap:2px; border:1px solid rgba(255,255,255,.15); border-radius:8px; overflow:hidden; }
+  .lang button { background:transparent; border:0; color:var(--muted); font:inherit; font-size:12px; padding:6px 10px; cursor:pointer; }
+  .lang button.act { background:var(--teal); color:#06282e; font-weight:700; }
   footer { border-top: 1px solid rgba(255,255,255,.06); margin-top: 60px; padding: 28px 0 40px; color: var(--muted); font-size: 13px; }
   footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
   footer a { color: var(--teal); text-decoration: none; }
@@ -80,9 +83,10 @@
   <div class="wrap">
     <a class="brand" href="#"><img src="plusly.svg" alt="Plusly logo">Plusly</a>
     <nav>
-      <a href="#plusly">Plusly</a>
+      <a href="#plusly" data-i18n="navApps">Plusly</a>
       <a href="#ritme">Ritme</a>
-      <a href="#contact">Contact</a>
+      <a href="#contact" data-i18n="navContact">Contact</a>
+      <span class="lang"><button id="btnNl" type="button">NL</button><button id="btnEn" type="button">EN</button></span>
     </nav>
   </div>
 </header>
@@ -90,10 +94,10 @@
 <main class="wrap">
 
   <div class="hero">
-    <h1>Software die <span class="accent">jouw leven</span> makkelijker maakt.</h1>
-    <p>Plusly bouwt open, privacyvriendelijke apps: een veilige messenger én Ritme, een dagplanner voor mensen die leven met een bipolaire stoornis.</p>
-    <a class="btn" href="#apps">Bekijk de apps</a>
-    <a class="btn secondary" href="#contact">Contact</a>
+    <h1><span data-i18n="heroTitleA">Software die </span><span class="accent" data-i18n="heroTitleB">jouw leven</span><span data-i18n="heroTitleC"> makkelijker maakt.</span></h1>
+    <p data-i18n="heroSub">Plusly bouwt open, privacyvriendelijke apps: een veilige messenger én Ritme, een dagplanner voor mensen die leven met een bipolaire stoornis.</p>
+    <a class="btn" href="#apps" data-i18n="heroCta">Bekijk de apps</a>
+    <a class="btn secondary" href="#contact" data-i18n="heroContact">Contact</a>
   </div>
 
   <div id="apps"></div>
@@ -101,17 +105,17 @@
   <section class="app" id="plusly">
     <img class="icon" src="plusly.svg" alt="Plusly app-icoon" style="background:#131f26; padding:18px;">
     <div>
-      <h2>Plusly <span class="tag">Chat</span></h2>
-      <p>Plusly is een feature-rijke chat-client voor het open Matrix-protocol — end-to-end versleuteld, gedecentraliseerd en zonder reclame. Jouw gesprekken blijven van jou.</p>
+      <h2>Plusly <span class="tag" data-i18n="tagChat">Chat</span></h2>
+      <p data-i18n="pluslyDesc">Plusly is een feature-rijke chat-client voor het open Matrix-protocol — end-to-end versleuteld, gedecentraliseerd en zonder reclame. Jouw gesprekken blijven van jou.</p>
       <ul class="features">
-        <li>End-to-end encryptie, cross-signing en back-up van je sleutels</li>
-        <li>Werkt met elke Matrix-homeserver (eigen server of publiek)</li>
-        <li>Groepen, Spaces, polls, spraakberichten en ingebouwde vertaling</li>
-        <li>Open source, zonder advertenties of tracking</li>
+        <li data-i18n="pluslyF1">End-to-end encryptie, cross-signing en back-up van je sleutels</li>
+        <li data-i18n="pluslyF2">Werkt met elke Matrix-homeserver (eigen server of publiek)</li>
+        <li data-i18n="pluslyF3">Groepen, Spaces, polls, spraakberichten en ingebouwde vertaling</li>
+        <li data-i18n="pluslyF4">Open source, zonder advertenties of tracking</li>
       </ul>
       <div class="links">
         <a class="store" href="https://play.google.com/store/apps/details?id=com.danield.plusly.app"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>Download op Google Play</a>
-        <a href="https://github.com/danield76799/Plusly">Broncode &amp; releases →</a>
+        <a href="https://github.com/danield76799/Plusly" data-i18n="sourceLink">Broncode &amp; releases →</a>
       </div>
     </div>
   </section>
@@ -119,13 +123,13 @@
   <section class="app" id="ritme">
     <img class="icon" src="ritme.png" alt="Ritme app-icoon">
     <div>
-      <h2>Ritme <span class="tag">Gezondheid</span></h2>
-      <p>Ritme helpt je met een bipolaire stoornis de grip op je dag te houden: vaste routines, medicatie op tijd en inzicht in je stemming en slaap — met een rapport voor je behandelaar.</p>
+      <h2>Ritme <span class="tag" data-i18n="tagHealth">Gezondheid</span></h2>
+      <p data-i18n="ritmeDesc">Ritme helpt je met een bipolaire stoornis de grip op je dag te houden: vaste routines, medicatie op tijd en inzicht in je stemming en slaap — met een rapport voor je behandelaar.</p>
       <ul class="features">
-        <li>Ochtend- en avond-check-in met stemming, energie en slaap</li>
-        <li>Medicatie-herinneringen en inname-registratie</li>
-        <li>Vroege-waarschuwingssignalen en een PDF-rapport voor je psychiater</li>
-        <li>Alles blijft op je eigen toestel; jij bepaalt wat je deelt</li>
+        <li data-i18n="ritmeF1">Ochtend- en avond-check-in met stemming, energie en slaap</li>
+        <li data-i18n="ritmeF2">Medicatie-herinneringen en inname-registratie</li>
+        <li data-i18n="ritmeF3">Vroege-waarschuwingssignalen en een PDF-rapport voor je psychiater</li>
+        <li data-i18n="ritmeF4">Alles blijft op je eigen toestel; jij bepaalt wat je deelt</li>
       </ul>
       <div class="links">
         <a class="store" href="https://play.google.com/store/apps/details?id=com.ritme.ritme.v2"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>Download op Google Play</a>
@@ -134,8 +138,8 @@
   </section>
 
   <div class="contact" id="contact">
-    <h2>Contact</h2>
-    <p style="color:var(--muted); margin-bottom:6px;">Vragen, bugs of ideeën over Plusly of Ritme?</p>
+    <h2 data-i18n="contactTitle">Contact</h2>
+    <p style="color:var(--muted); margin-bottom:6px;" data-i18n="contactSub">Vragen, bugs of ideeën over Plusly of Ritme?</p>
     <a href="mailto:danielplusly@gmail.com">danielplusly@gmail.com</a>
   </div>
 
@@ -144,9 +148,92 @@
 <footer>
   <div class="wrap">
     <span>© 2026 Plusly</span>
-    <span><a href="/privacy">Privacy</a> · <a href="mailto:danielplusly@gmail.com">danielplusly@gmail.com</a></span>
+    <span><a href="/privacy" data-i18n="footerPrivacy">Privacy</a> · <a href="mailto:danielplusly@gmail.com">danielplusly@gmail.com</a></span>
   </div>
 </footer>
 
+
+<script>
+const I18N = {
+  nl: {
+    'meta.title': 'Plusly — Open chat en Ritme voor balans',
+    'meta.description': 'Plusly is een veilige, open-source Matrix-chatapp. Ritme is de dagplanner voor mensen met een bipolaire stoornis: check-ins, medicatie en een rapport voor je behandelaar.',
+    navApps: 'Plusly', navContact: 'Contact',
+    heroTitleA: 'Software die ', heroTitleB: 'jouw leven', heroTitleC: ' makkelijker maakt.',
+    heroSub: 'Plusly bouwt open, privacyvriendelijke apps: een veilige messenger én Ritme, een dagplanner voor mensen die leven met een bipolaire stoornis.',
+    heroCta: 'Bekijk de apps', heroContact: 'Contact',
+    tagChat: 'Chat', tagHealth: 'Gezondheid',
+    pluslyDesc: 'Plusly is een feature-rijke chat-client voor het open Matrix-protocol — end-to-end versleuteld, gedecentraliseerd en zonder reclame. Jouw gesprekken blijven van jou.',
+    pluslyF1: 'End-to-end encryptie, cross-signing en back-up van je sleutels',
+    pluslyF2: 'Werkt met elke Matrix-homeserver (eigen server of publiek)',
+    pluslyF3: 'Groepen, Spaces, polls, spraakberichten en ingebouwde vertaling',
+    pluslyF4: 'Open source, zonder advertenties of tracking',
+    sourceLink: 'Broncode & releases →',
+    ritmeDesc: 'Ritme helpt je met een bipolaire stoornis de grip op je dag te houden: vaste routines, medicatie op tijd en inzicht in je stemming en slaap — met een rapport voor je behandelaar.',
+    ritmeF1: 'Ochtend- en avond-check-in met stemming, energie en slaap',
+    ritmeF2: 'Medicatie-herinneringen en inname-registratie',
+    ritmeF3: 'Vroege-waarschuwingssignalen en een PDF-rapport voor je psychiater',
+    ritmeF4: 'Alles blijft op je eigen toestel; jij bepaalt wat je deelt',
+    contactTitle: 'Contact',
+    contactSub: 'Vragen, bugs of ideeën over Plusly of Ritme?',
+    footerPrivacy: 'Privacy',
+    store: 'Download op Google Play',
+  },
+  en: {
+    'meta.title': 'Plusly — Open chat and Ritme for balance',
+    'meta.description': 'Plusly is a secure, open-source Matrix chat app. Ritme is the daily planner for people living with bipolar disorder: check-ins, medication and a report for your clinician.',
+    navApps: 'Apps', navContact: 'Contact',
+    heroTitleA: 'Software that makes ', heroTitleB: 'your life', heroTitleC: ' easier.',
+    heroSub: 'Plusly builds open, privacy-friendly apps: a secure messenger and Ritme, a daily planner for people living with bipolar disorder.',
+    heroCta: 'See the apps', heroContact: 'Contact',
+    tagChat: 'Chat', tagHealth: 'Health',
+    pluslyDesc: 'Plusly is a feature-rich chat client for the open Matrix protocol — end-to-end encrypted, decentralised and ad-free. Your conversations stay yours.',
+    pluslyF1: 'End-to-end encryption, cross-signing and key backup',
+    pluslyF2: 'Works with any Matrix homeserver (your own or a public one)',
+    pluslyF3: 'Groups, Spaces, polls, voice messages and built-in translation',
+    pluslyF4: 'Open source, with no ads and no tracking',
+    sourceLink: 'Source code & releases →',
+    ritmeDesc: 'Ritme helps you, with bipolar disorder, stay in control of your day: regular routines, on-time medication and insight into your mood and sleep — with a report for your clinician.',
+    ritmeF1: 'Morning and evening check-ins with mood, energy and sleep',
+    ritmeF2: 'Medication reminders and intake tracking',
+    ritmeF3: 'Early-warning signals and a PDF report for your psychiatrist',
+    ritmeF4: 'Everything stays on your device; you decide what you share',
+    contactTitle: 'Contact',
+    contactSub: 'Questions, bugs or ideas about Plusly or Ritme?',
+    footerPrivacy: 'Privacy',
+    store: 'Download on Google Play',
+  },
+};
+function applyLang(lang) {
+  const dict = I18N[lang] || I18N.en;
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const v = dict[el.dataset.i18n];
+    if (v != null) el.textContent = v;
+  });
+  document.querySelectorAll('[data-i18n-attr]').forEach(el => {
+    const [attr, key] = el.dataset.i18nAttr.split(':');
+    if (dict[key] != null) el.setAttribute(attr, dict[key]);
+  });
+  document.title = dict['meta.title'];
+  document.documentElement.lang = lang;
+  document.getElementById('btnNl').classList.toggle('act', lang === 'nl');
+  document.getElementById('btnEn').classList.toggle('act', lang === 'en');
+  document.querySelectorAll('.links .store').forEach(a => {
+    const svg = a.querySelector('svg');
+    a.textContent = '';
+    if (svg) a.appendChild(svg);
+    a.appendChild(document.createTextNode(' ' + dict.store));
+  });
+  try { localStorage.setItem('lang', lang); } catch (e) {}
+}
+function detectLang() {
+  try { const saved = localStorage.getItem('lang'); if (saved) return saved; } catch (e) {}
+  const nav = (navigator.language || 'en').toLowerCase();
+  return nav.startsWith('nl') ? 'nl' : 'en';
+}
+document.getElementById('btnNl').addEventListener('click', () => applyLang('nl'));
+document.getElementById('btnEn').addEventListener('click', () => applyLang('en'));
+applyLang(detectLang());
+</script>
 </body>
 </html>

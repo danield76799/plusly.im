@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Privacy — Plusly</title>
+<title data-i18n="meta.title">Privacy — Plusly</title>
 <link rel="icon" type="image/svg+xml" href="plusly.svg">
 <style>
   body { background:#0d151a; color:#e8eef1; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; line-height:1.6; margin:0; }
@@ -12,40 +12,104 @@
   a { color:#49AFC2; }
   p, li { color:#cdd9de; font-size:15px; }
   .muted { color:#9db3bc; font-size:13px; margin-top:40px; }
+  .langbar { display:flex; justify-content:flex-end; margin-bottom:10px; }
+  .lang { display:flex; gap:2px; border:1px solid rgba(255,255,255,.15); border-radius:8px; overflow:hidden; }
+  .lang button { background:transparent; border:0; color:#9db3bc; font:inherit; font-size:12px; padding:6px 10px; cursor:pointer; }
+  .lang button.act { background:#49AFC2; color:#06282e; font-weight:700; }
 </style>
 </head>
 <body>
 <div class="wrap">
-  <h1>Privacyverklaring</h1>
-  <p>Laatst bijgewerkt: 21 november 2026</p>
+  <div class="langbar"><span class="lang"><button id="btnNl" type="button">NL</button><button id="btnEn" type="button">EN</button></span></div>
 
-  <h2>Plusly (chat-app)</h2>
-  <p>Plusly is een open-source client voor het Matrix-protocol en gebruikt geen eigen servers. Je berichten en gegevens gaan rechtstreeks naar de homeserver die <em>jij</em> kiest (bijvoorbeeld een eigen server of een publieke homeserver zoals matrix.org). De ontwikkelaar van Plusly heeft geen toegang tot je berichten, sleutels of accountgegevens.</p>
-  <ul>
-    <li>End-to-end versleutelde kamers worden alleen door de afzender en ontvangers ontsleuteld.</li>
-    <li>Wat je homeserver aan metadata opslaat (bijv. wie, met wie, wanneer) bepaalt de beheerder van die homeserver — niet de app en niet de ontwikkelaar van Plusly.</li>
-    <li>Push-notificaties kunnen via de pushdienst van je toestel/aanbieder lopen; daarbij kan een beperkte hoeveelheid metadata (afzender-identiteit) zichtbaar zijn voor die dienst.</li>
-    <li>Plusly verzamelt zelf geen gebruiksstatistieken of analytics.</li>
-  </ul>
+  <div data-lang-block="nl">
+    <h1>Privacyverklaring</h1>
+    <p>Laatst bijgewerkt: 21 november 2026</p>
 
-  <h2>Ritme</h2>
-  <p>Ritme is een dagboek/check-in voor mensen met een bipolaire stoornis. Je voert stemming, slaap, medicatie en activiteiten in.</p>
-  <ul>
-    <li>Al je gegevens worden <strong>lokaal op je toestel</strong> opgeslagen. Er is geen Ritme-account en er is geen centrale server.</li>
-    <li>Back-ups maak je alleen zelf, en ze worden alleen opgeslagen waar jij dat kiest (bijv. een bestand dat je zelf bewaart of deelt). Wij hebben daar nooit toegang toe.</li>
-    <li>Het PDF-rapport dat je kunt maken, bevat je gezondheidsgegevens; deel het alleen met wie jij vertrouwt, bijvoorbeeld je behandelaar.</li>
-    <li>Ritme bevat geen advertenties, geen analytics en geen tracking-software.</li>
-    <li>Je kunt alle gegevens wissen via de instellingen van de app of door de app te verwijderen.</li>
-  </ul>
+    <h2>Plusly (chat-app)</h2>
+    <p>Plusly is een open-source client voor het Matrix-protocol en gebruikt geen eigen servers. Je berichten en gegevens gaan rechtstreeks naar de homeserver die <em>jij</em> kiest (bijvoorbeeld een eigen server of een publieke homeserver zoals matrix.org). De ontwikkelaar van Plusly heeft geen toegang tot je berichten, sleutels of accountgegevens.</p>
+    <ul>
+      <li>End-to-end versleutelde kamers worden alleen door de afzender en ontvangers ontsleuteld.</li>
+      <li>Wat je homeserver aan metadata opslaat (bijv. wie, met wie, wanneer) bepaalt de beheerder van die homeserver — niet de app en niet de ontwikkelaar van Plusly.</li>
+      <li>Push-notificaties kunnen via de pushdienst van je toestel/aanbieder lopen; daarbij kan een beperkte hoeveelheid metadata (afzender-identiteit) zichtbaar zijn voor die dienst.</li>
+      <li>Plusly verzamelt zelf geen gebruiksstatistieken of analytics.</li>
+    </ul>
 
-  <h2>Deze website</h2>
-  <p>Deze website plaatst geen cookies, toont geen advertenties en verzamelt geen persoonsgegevens. Er zijn geen analytics- of tracking-scripts actief.</p>
+    <h2>Ritme</h2>
+    <p>Ritme is een dagboek/check-in voor mensen met een bipolaire stoornis. Je voert stemming, slaap, medicatie en activiteiten in.</p>
+    <ul>
+      <li>Al je gegevens worden <strong>lokaal op je toestel</strong> opgeslagen. Er is geen Ritme-account en er is geen centrale server.</li>
+      <li>Back-ups maak je alleen zelf, en ze worden alleen opgeslagen waar jij dat kiest (bijv. een bestand dat je zelf bewaart of deelt). Wij hebben daar nooit toegang toe.</li>
+      <li>Het PDF-rapport dat je kunt maken, bevat je gezondheidsgegevens; deel het alleen met wie jij vertrouwt, bijvoorbeeld je behandelaar.</li>
+      <li>Ritme bevat geen advertenties, geen analytics en geen tracking-software.</li>
+      <li>Je kunt alle gegevens wissen via de instellingen van de app of door de app te verwijderen.</li>
+    </ul>
 
-  <h2>Contact</h2>
-  <p>Vragen over deze privacyverklaring of over gegevensverwerking: <a href="mailto:danielplusly@gmail.com">danielplusly@gmail.com</a></p>
+    <h2>Deze website</h2>
+    <p>Deze website plaatst geen cookies, toont geen advertenties en verzamelt geen persoonsgegevens. Er zijn geen analytics- of tracking-scripts actief. Alleen de taalvoorkeur wordt lokaal in je browser opgeslagen.</p>
 
-  <p class="muted">Wijzigingen in deze verklaring worden op deze pagina gepubliceerd met een bijgewerkte datum.</p>
-  <p class="muted"><a href="/">← Terug naar plusly.im</a></p>
+    <h2>Contact</h2>
+    <p>Vragen over deze privacyverklaring of over gegevensverwerking: <a href="mailto:danielplusly@gmail.com">danielplusly@gmail.com</a></p>
+
+    <p class="muted">Wijzigingen in deze verklaring worden op deze pagina gepubliceerd met een bijgewerkte datum.</p>
+    <p class="muted"><a href="/">← Terug naar plusly.im</a></p>
+  </div>
+
+  <div data-lang-block="en" hidden>
+    <h1>Privacy Policy</h1>
+    <p>Last updated: 21 November 2026</p>
+
+    <h2>Plusly (chat app)</h2>
+    <p>Plusly is an open-source client for the Matrix protocol and does not run its own servers. Your messages and data go directly to the homeserver <em>you</em> choose (for example your own server or a public one such as matrix.org). The developer of Plusly has no access to your messages, keys or account details.</p>
+    <ul>
+      <li>End-to-end encrypted rooms are only decryptable by sender and recipients.</li>
+      <li>Any metadata your homeserver stores (e.g. who talks to whom, and when) is determined by your homeserver's administrator — not by the app and not by the developer of Plusly.</li>
+      <li>Push notifications may be delivered via your device's/OS push service; a limited amount of metadata (sender identity) can be visible to that service.</li>
+      <li>Plusly itself collects no usage statistics or analytics.</li>
+    </ul>
+
+    <h2>Ritme</h2>
+    <p>Ritme is a diary/check-in app for people living with bipolar disorder. You enter mood, sleep, medication and activities.</p>
+    <ul>
+      <li>All your data is stored <strong>locally on your device</strong>. There is no Ritme account and no central server.</li>
+      <li>Backups are made only by you, and are only stored where you choose (e.g. a file you keep yourself or share). We never have access to them.</li>
+      <li>The PDF report you can generate contains your health data; share it only with people you trust, such as your clinician.</li>
+      <li>Ritme contains no ads, no analytics and no tracking software.</li>
+      <li>You can erase all data via the app's settings or by uninstalling the app.</li>
+    </ul>
+
+    <h2>This website</h2>
+    <p>This website sets no cookies, shows no ads and collects no personal data. No analytics or tracking scripts are active. Only your language preference is stored locally in your browser.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about this privacy policy or about data processing: <a href="mailto:danielplusly@gmail.com">danielplusly@gmail.com</a></p>
+
+    <p class="muted">Changes to this policy are published on this page with an updated date.</p>
+    <p class="muted"><a href="/">← Back to plusly.im</a></p>
+  </div>
 </div>
+
+<script>
+const NL = document.querySelector('[data-lang-block="nl"]');
+const EN = document.querySelector('[data-lang-block="en"]');
+function applyLang(lang) {
+  const isNl = lang === 'nl';
+  NL.hidden = !isNl;
+  EN.hidden = isNl;
+  document.documentElement.lang = lang;
+  document.title = isNl ? 'Privacy — Plusly' : 'Privacy — Plusly';
+  document.getElementById('btnNl').classList.toggle('act', isNl);
+  document.getElementById('btnEn').classList.toggle('act', !isNl);
+  try { localStorage.setItem('lang', lang); } catch (e) {}
+}
+function detectLang() {
+  try { const saved = localStorage.getItem('lang'); if (saved) return saved; } catch (e) {}
+  const nav = (navigator.language || 'en').toLowerCase();
+  return nav.startsWith('nl') ? 'nl' : 'en';
+}
+document.getElementById('btnNl').addEventListener('click', () => applyLang('nl'));
+document.getElementById('btnEn').addEventListener('click', () => applyLang('en'));
+applyLang(detectLang());
+</script>
 </body>
 </html>
