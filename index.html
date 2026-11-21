@@ -62,6 +62,9 @@
   ul.features li { padding-left: 26px; position: relative; margin: 6px 0; color: #cdd9de; font-size: 15px; }
   ul.features li::before { content: "✓"; position: absolute; left: 0; color: var(--teal); font-weight: 700; }
   .links a { color: var(--teal); text-decoration: none; font-weight: 600; margin-right: 18px; font-size: 14px; }
+  .links .store { display:inline-flex; align-items:center; gap:8px; background: var(--teal); color:#06282e; border-radius:10px; padding:9px 16px; font-size:13px; margin-right:12px; }
+  .links .store:hover { text-decoration:none; filter:brightness(1.06); }
+  .links .store svg { width:14px; height:14px; fill:#06282e; }
   .links a:hover { text-decoration: underline; }
   footer { border-top: 1px solid rgba(255,255,255,.06); margin-top: 60px; padding: 28px 0 40px; color: var(--muted); font-size: 13px; }
   footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
@@ -107,6 +110,7 @@
         <li>Open source, zonder advertenties of tracking</li>
       </ul>
       <div class="links">
+        <a class="store" href="https://play.google.com/store/apps/details?id=com.danield.plusly.app"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>Download op Google Play</a>
         <a href="https://github.com/danield76799/Plusly">Broncode &amp; releases →</a>
       </div>
     </div>
@@ -124,7 +128,7 @@
         <li>Alles blijft op je eigen toestel; jij bepaalt wat je deelt</li>
       </ul>
       <div class="links">
-        <a href="https://play.google.com/store/apps/details?id=com.ritme.ritme.v2">Ritme in de Play Store →</a>
+        <a class="store" href="https://play.google.com/store/apps/details?id=com.ritme.ritme.v2"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>Download op Google Play</a>
       </div>
     </div>
   </section>
